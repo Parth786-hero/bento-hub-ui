@@ -29,7 +29,7 @@ export default function Special() {
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: 150, opacity: 0 }}
             transition={{ duration: 0.6, ease: "easeInOut" }}
-            className="absolute top-3 right-2 bg-white text-black rounded-sm px-4 py-1 text-sm tracking-wider shadow-md z-20"
+            className="absolute bottom-3 right-2 bg-white text-black rounded-sm px-4 py-1 text-sm tracking-wider shadow-md z-20"
           >
             Lets start shopping, <span className="font-bold">{user?.fname}</span>.
           </motion.div>

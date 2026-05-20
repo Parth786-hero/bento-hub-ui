@@ -14,7 +14,7 @@ export default function ProductsOnScroll() {
 
   useEffect(() => {
     if (items.length === 0) {
-      dispatch(fetchProductsOnScroll({ limit: 7 }));
+      dispatch(fetchProductsOnScroll({ limit: 6 }));
     }
   }, [dispatch, items.length]);
 

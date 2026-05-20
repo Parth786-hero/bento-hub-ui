@@ -9,6 +9,7 @@ import searchProductsSlice from "./slices/searchProductsSlice";
 import subcategorySlice from "./slices/subcategorySlice";
 import productsOnScrollSlice from "./slices/productsOnScrollSlice";
 import discountScheduler from "./slices/discountScheduler";
+import cartSlice from "./slices/cartSlice";
 const store = configureStore({
     name : "myStore",
     reducer : {
@@ -21,7 +22,8 @@ const store = configureStore({
         searchProducts : searchProductsSlice,
         subCategory : subcategorySlice,
         productsOnScroll : productsOnScrollSlice,
-        hitDiscount : discountScheduler
+        hitDiscount : discountScheduler,
+        cart : cartSlice
     }
 });
 

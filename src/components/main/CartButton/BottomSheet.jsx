@@ -8,7 +8,8 @@ import Bill from "./Bill";
 import { fetchAllProducts } from "../../../store/slices/productSlice";
 import { calculateTotalPrice, calculateGrandTotal } from "../../../utilis/priceUtils";
 import { API_URL } from "../../../main";
-export default function BottomSheet({ isOpen, onClose , donation , setDonation}) {
+import { changeCartStatus } from "../../../store/slices/cartSlice";
+export default function BottomSheet({ isOpen  , donation , setDonation}) {
   const token = localStorage.getItem("token");
   const dispatch = useDispatch();
   const { getBag, clearTheCart, fetchCart } = useCartContext();
@@ -72,7 +73,7 @@ export default function BottomSheet({ isOpen, onClose , donation , setDonation})
           dispatch(fetchAllProducts());
           fetchCart();
           setSuccess(false);
-          onClose();
+          dispatch(changeCartStatus(false));
         }, 2100);
       } else {
         setError(data.message);
@@ -92,7 +93,7 @@ export default function BottomSheet({ isOpen, onClose , donation , setDonation})
           <motion.div
             className="fixed inset-0 z-30"
             style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}
-            onClick={onClose}
+            onClick={()=>dispatch(changeCartStatus(false))}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -111,7 +112,7 @@ export default function BottomSheet({ isOpen, onClose , donation , setDonation})
               <div className="flex justify-between items-center pb-2">
                 <h2 className="text-xl font-extrabold">My Cart</h2>
                 <button
-                  onClick={onClose}
+                  onClick={()=>dispatch(changeCartStatus(false))}
                   className="text-gray-600 hover:text-black font-extrabold cursor-pointer"
                 >
                   ✕
@@ -138,7 +139,7 @@ export default function BottomSheet({ isOpen, onClose , donation , setDonation})
                 {cartItems.map((item) => {
                   const product = listOfAllProducts.find((p) => p.id === item.id);
                   return (
-                    <MiniCard key={product.id} data={product} onClose={onClose} />
+                    product && <MiniCard key={product.id} data={product} />
                   );
                 })}
               </ul>
