@@ -40,7 +40,7 @@ export default function Special() {
       <h1 className="relative z-10 text-white text-3xl md:text-5xl w-auto md:w-[65%] md:tracking-wide md:leading-snug font-extrabold">
         Stock Up daily <span className="text-green">Essentials</span>.
       </h1>
-      <p className="md:text-3xl text-white w-auto md:w-[60%] mt-3 md:leading-snug md:tracking-wide">
+      <p className="text-xl md:text-3xl text-white w-auto md:w-[60%] mt-3 md:leading-snug tracking-wide">
         Get Farm Fresh <span className="text-green">goodness</span> and a{" "}
         <span className="text-green">range of exotic</span> fruits, vegetables,
         eggs and more. <span className="text-green">Explore</span> more on our

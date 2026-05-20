@@ -8,6 +8,7 @@ html {
 :root{
   /* font-size : 15.75px; */
   font-size : 14.5px;
+  
 }
 .font-thin {
   font-weight : 100;
@@ -47,15 +48,17 @@ html {
 @layer base {
   body {
     font-family: "Nunito Sans", sans-serif;
+    /* transition: all .5s ease-in-out; */
   }
 }
 
 
 @theme {
   /* --color-green: #00b894; */
- 
-  --color-green : #27ae60;
- 
+  /* --color-green : #16a085; */
+  --color-green :#20bf6b;
+
+  /* #20bf6b; */
   --color-white: #f5f6fa;
   --color-white-pure : white;
   /* --color-white : white; */
@@ -67,6 +70,7 @@ html {
 html, body {
   min-height: 100%;
   overflow-y: auto;
+  transition: all .5s ease-in-out;
 }
 
 
