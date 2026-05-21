@@ -91,7 +91,7 @@ export default function BottomSheet({ isOpen  , donation , setDonation}) {
         <>
           {/* Background overlay */}
           <motion.div
-            className="fixed inset-0 z-30"
+            className="fixed inset-0 z-30 w-screen h-screen"
             style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}
             onClick={()=>dispatch(changeCartStatus(false))}
             initial={{ opacity: 0 }}

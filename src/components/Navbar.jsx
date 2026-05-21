@@ -103,7 +103,7 @@ export default function Navbar() {
                   <section className="md:hidden flex items-center gap-x-8 mr-0 w-stretch self-1">
                     {/* <UserAccount />
                     <CartButton /> */}
-                    <div  className="w-0 h-0 overflow-hidden absolute">
+                    <div  className="w-screen h-screen absolute">
                     <CartButton />
                     </div>
  
