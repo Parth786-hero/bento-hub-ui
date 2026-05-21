@@ -65,7 +65,7 @@ export default function ProductCard(props) {
             alt="scene description"
             className="w-full h-full object-contain"
           />
-          {user.email === "kapoorparth096@gmail.com" && (
+          {(user.email === "kapoorparth096@gmail.com") && (
             <i
               className="absolute top-1 left-2 fa-solid fa-pencil grid text-center items-center justify-center block shadow-xl rounded-full text-md bg-gray-200 hover:scale-110"
               onClick={handleEditFunc}
