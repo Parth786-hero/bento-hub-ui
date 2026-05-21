@@ -37,7 +37,7 @@
     const isExpired = remainingSeconds <= 0;
 
     return (
-      <div className="fixed bottom-3 md:bottom-6 right-3 md:right-8 flex flex-col items-center z-50">
+      <div className="fixed bottom-2 md:bottom-6 right-3 md:right-8 flex flex-col items-center z-50">
         <motion.div
           initial={{ opacity: 0, scale: 3, x: 200, y: -200 }} // dramatic entrance
           animate={
@@ -193,10 +193,12 @@
     return (
       <>
         <div className="max-w-[95%] mx-auto min-h-screen hide-scrollbar">
-          {show && <Badge remainingSeconds={remainingSeconds} />}
+         
+         {show && <Badge remainingSeconds={remainingSeconds} />}
           {getBag().length > 0 && (
-            <CartBanner show={true} getBag={getBag} />
+            <CartBanner show={true} getBag={getBag} remainingSeconds={remainingSeconds}/>
           )}
+         
 
           <Navbar />
           <Routes>

@@ -82,7 +82,7 @@ export default function BottomSheet({ isOpen, donation, setDonation }) {
         setSuccess(true);
         const timerId = setTimeout(() => {
           cleanupAfterCheckout();
-        }, 6000);
+        }, 12000);
 
         setTimer(timerId);
       } else {

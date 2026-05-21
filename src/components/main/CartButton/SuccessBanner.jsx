@@ -29,7 +29,7 @@ export default function SuccessBanner({ cleanupAfterCheckout, timerId }) {
         <motion.div
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
-            transition={{ duration: 6, ease: "linear" }}
+            transition={{ duration: 12, ease: "linear" }}
             className="absolute top-0 left-0 h-[6.5px] bg-green rounded-md"
           />
         {/* Success Tick with Glow Pulse */}

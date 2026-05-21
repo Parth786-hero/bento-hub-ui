@@ -40,7 +40,7 @@ export default function AddToCartBtn({ id }) {
       // Plain button on small screens
       <button
         key="add"
-        disabled={error || checkAuthority(user.email)}
+        // disabled={error || checkAuthority(user.email)}
         className="product-btn font-semibold cursor-pointer absolute right-0.5 top-0.5 bg-green rounded-lg py-0.5 px-1.5"
         // onClick={(e) => {
         //   e.stopPropagation();

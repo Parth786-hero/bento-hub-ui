@@ -116,7 +116,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { changeCartStatus } from "../../store/slices/cartSlice";
 import { useRef, useEffect } from "react";
 
-function CartBanner({ show, getBag }) {
+function CartBanner({ show, getBag , remainingSeconds}) {
   const dispatch = useDispatch();
   const { products } = useSelector((bag) => bag.products);
   const allProducts = products.flatMap((cat) => cat.products);
@@ -155,8 +155,8 @@ function CartBanner({ show, getBag }) {
             transition: { duration: 0.7, ease: [0.4, 0, 0.2, 1] },
           }}
           layout
-          className="flex items-center gap-3 px-2.5 py-2 fixed w-fit bg-green bottom-2 z-50 
-                     left-1/2 transform -translate-x-1/2 rounded-full text-white shadow-xl cursor-pointer hover:scale-104"
+          className={`flex items-center gap-3 px-2.5 py-2 fixed w-fit bg-green bottom-2 z-50 
+          ${remainingSeconds === 0 ? "left-1/2 transform -translate-x-1/2" : "left-3"} rounded-full text-white shadow-xl cursor-pointer hover:scale-104`}
           onClick={() => dispatch(changeCartStatus(true))}
         >
           <div className="p-0.5 flex items-center">
